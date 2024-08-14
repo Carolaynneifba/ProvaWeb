@@ -251,8 +251,8 @@ nav {
 
 /*Rodapé*/
 .footer {
-    background-color: #422A3C; /* Cor escura para o fundo do rodapé */
-    color: #ECBFD3; /* Cor clara para o texto */
+    background-color: #422a3c; /* Cor escura para o fundo do rodapé */
+    color: #ecbfd3; /* Cor clara para o texto */
     padding: 40px 20px;
     text-align: center;
 }
@@ -263,17 +263,19 @@ nav {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    color: #ECBFD3; /* Cor clara para o texto dentro do container */
+    color: #ecbfd3; /* Cor clara para o texto dentro do container */
 }
 
 .footer-logo img {
     max-width: 150px; /* Ajuste conforme necessário */
 }
 
-.footer-links, .footer-contact, .footer-social {
+.footer-links,
+.footer-contact,
+.footer-social {
     flex: 1;
     margin: 10px;
-    color: #ECBFD3; /* Cor clara para os textos */
+    color: #ecbfd3; /* Cor clara para os textos */
 }
 
 .footer-links ul {
@@ -286,7 +288,7 @@ nav {
 }
 
 .footer-links a {
-    color: #ECBFD3; /* Cor clara para os links */
+    color: #ecbfd3; /* Cor clara para os links */
     text-decoration: none;
     font-size: 1rem;
 }
@@ -301,12 +303,18 @@ nav {
 
 .footer-social {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Alinha o texto em coluna */
+    align-items: center; /* Centraliza o texto */
 }
 
-.social-icon {
-    display: inline-block;
-    margin: 0 10px;
+.footer-social h4 {
+    margin-bottom: 10px; /* Espaço abaixo do título "Redes Sociais" */
+}
+
+.footer-social .social-icons {
+    display: flex; /* Alinha os ícones horizontalmente */
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    gap: 10px; /* Espaçamento entre os ícones */
 }
 
 .social-icon img {
@@ -316,27 +324,28 @@ nav {
 
 .footer-bottom {
     margin-top: 20px;
-    border-top: 1px solid #BA7894; /* Borda com cor de destaque */
+    border-top: 1px solid #ba7894; /* Borda com cor de destaque */
     padding-top: 10px;
-    background-color: #422A3C; /* Cor de fundo consistente com o rodapé */
+    background-color: #422a3c; /* Cor de fundo consistente com o rodapé */
 }
 
 .footer-bottom p {
     margin: 0;
     font-size: 0.9rem;
-    color: #ECBFD3; /* Cor clara para o texto */
+    color: #ecbfd3; /* Cor clara para o texto */
 }
 
 .footer-logo {
     display: flex;
     align-items: center; /* Alinha verticalmente a logo e o texto */
     gap: 10px; /* Espaço entre a logo e o texto */
-    color: #ECBFD3; /* Cor do texto "KAROLESTICA" */
+    color: #ecbfd3; /* Cor do texto "KAROLESTICA" */
     font-size: 1.2rem; /* Tamanho da fonte para "KAROLESTICA" */
     font-weight: bold; /* Deixa o texto em negrito */
 }
 
 .footer-logo img {
-    filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%) contrast(90%);
+    filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%)
+        contrast(90%);
 }
 
