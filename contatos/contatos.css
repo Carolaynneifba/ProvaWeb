@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+     overflow-x: hidden;
+    
+}
+    
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-container {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: 50%; /* Distância ajustada entre o logo e o menu */
+    padding: 0;
+}
+
+.menu-container li {
+    margin-right: 30px;
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+
+.menu-container li {
+    margin-right: 20px;
+    position: relative; /* Necessário para o pseudo-elemento */
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #797979;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-container a:hover {
+    transform: scale(1.1); /* Aumenta um pouco o tamanho do link ao passar o mouse */
+    color: #000; /* Opcional: muda a cor do texto ao passar o mouse */
+}
+
+.menu-container a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Ajusta a posição da linha abaixo do link */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333; /* Cor da linha */
+    transition: width 0.3s ease;
+}
+
+.menu-container a:hover::after {
+    width: 100%; /* A linha aparece abaixo do link ao passar o mouse */
+}
+
+
+
+#logo {
+    margin-right: 5px; /* Espaço entre o logo e o texto KAROLESTICA */
+    margin-left: 50px;
+    vertical-align: middle; /* Certifica-se de que o logo e o texto estejam alinhados verticalmente */
+}
+
+.about:hover{
+    background-color: #382828;
+}
+
+
+
+.sign-in-btn {
+    background-color: #BA7894;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 110px;
+    height: 40px;
+}
+
+.sign-in-btn:hover {
+    background-color: #422A3C;
+}
+
+
+
+/*card principal*/
+.card-section {
+    background-color: #422A3C; /* Cor roxa para o fundo */
+    width: 1920px;
+    height: 400px;
+    color: #FFFFFF; /* Cor branca para o texto */
+    padding: 40px;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    flex-direction: column; /* Garante que o texto fique em coluna */
+}
+
+.card-section .welcome-content p {
+    font-family: 'monrope';
+    font-family: 900;
+    font-size: 15px;
+    color: #FFFFFF; /* Cor branca para os parágrafos */
+}
+
+.card-section .welcome-content h2 {
+    font-family: 'playfair display';
+    font-weight: 700;
+    font-size: 55px;
+    color: #FFFFFF; /* Cor branca para o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+
+
+
+/* Seção dos contatos */
+.contact-section {
+    background-color: #f9f6f2; /* Cor de fundo da seção */
+    padding: 40px 20px; /* Espaçamento vertical ao redor da seção */
+    text-align: center; /* Centraliza o texto na seção */
+}
+
+.contact-texts {
+    margin-bottom: 40px; /* Espaçamento entre os textos e o formulário */
+}
+
+.contact-texts h1 {
+    font-family: 'monrope';
+    font-weight: 600;
+    margin-bottom: 20px; /* Espaçamento entre o título e o próximo texto */
+    color: #BA7894; /* Cor do título */
+    font-size: 15px;
+}
+
+.contact-texts h2 {
+    font-family: 'playfair display';
+    font-weight: 700;
+    margin-bottom: 15px; /* Espaçamento entre o subtítulo e o próximo texto */
+    color: #422A3C; /* Cor do subtítulo */
+    font-size: 45px;
+}
+
+.contact-texts p {
+    font-family: 'monrope';
+    font-weight: 500;
+    margin-bottom: 30px; /* Espaçamento entre o parágrafo e o formulário */
+    color: #555555; /* Cor do parágrafo */
+    font-size: 18px;
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; /* Ajusta a largura máxima do contêiner do formulário */
+}
+
+.contact-form {
+    background-color: #FFFFFF; /* Cor de fundo branca para o formulário */
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px; /* Largura máxima do formulário */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave ao formulário */
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #422A3C; /* Cor do texto do título */
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #422A3C; /* Cor dos labels */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #BA7894; /* Cor da borda dos inputs */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+.contact-form button {
+    background-color: #422A3C; /* Cor do botão */
+    color: #FFFFFF; /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #ECBFD3; /* Cor do botão ao passar o mouse */
+    color: #422A3C; /* Cor do texto do botão ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+
+
+/*Rodapé*/
+.footer {
+    background-color: #422A3C; /* Cor escura para o fundo do rodapé */
+    color: #ECBFD3; /* Cor clara para o texto */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ECBFD3; /* Cor clara para o texto dentro do container */
+}
+
+.footer-logo img {
+    max-width: 150px; /* Ajuste conforme necessário */
+}
+
+.footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    margin: 10px;
+    color: #ECBFD3; /* Cor clara para os textos */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ECBFD3; /* Cor clara para os links */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #BA7894; /* Borda com cor de destaque */
+    padding-top: 10px;
+    background-color: #422A3C; /* Cor de fundo consistente com o rodapé */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ECBFD3; /* Cor clara para o texto */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a logo e o texto */
+    gap: 10px; /* Espaço entre a logo e o texto */
+    color: #ECBFD3; /* Cor do texto "KAROLESTICA" */
+    font-size: 1.2rem; /* Tamanho da fonte para "KAROLESTICA" */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.footer-logo img {
+    filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%) contrast(90%);
+}
+

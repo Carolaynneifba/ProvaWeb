@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contatos</title>
+
+        <link rel="stylesheet" href="contatos.css" />
+    </head>
+    <body>
+        <header id="header">
+            <nav>
+                <div class="logo-container">
+                    <img src="../img/logo.png" alt="logo" id="logo" />
+                    <span id="logo-text">KAROLESTICA</span>
+                </div>
+
+                <ul class="menu-container">
+                    <li>
+                        <a href="../index.html"
+                            ><i class="inicio" id="inicio"></i> INÍCIO</a
+                        >
+                    </li>
+                    <li>
+                        <a href="../sobre/sobre.html"
+                            ><i class="about" id="about"></i> SOBRE</a
+                        >
+                    </li>
+                    <li>
+                        <a href="../contatos/contatos.html"
+                            ><i class="contact" id="contact"></i> CONTATOS</a
+                        >
+                    </li>
+                    <li><button class="sign-in-btn">ENTRAR</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="card-section">
+            <div class="text-container">
+                <div class="welcome-content">
+                    <p>ENTRE EM CONTATO</p>
+                    <h2>Nós estamos prontos para te acessorar 24x7</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-texts">
+                <h1>AGENDE UMA VISITA</h1>
+                <h2>Entre em Contato Conosco!</h2>
+                <p>
+                    Tem dúvidas ou precisa de mais informações? Fale conosco e
+                    nossa equipe irá ajudar você com o que precisar.
+                </p>
+            </div>
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <h2>Formulário de Contato</h2>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required />
+
+                    <label for="service">Tipo de Serviço:</label>
+                    <select id="service" name="service" required>
+                        <option value="">Selecione...</option>
+                        <option value="consulta">Consulta</option>
+                        <option value="tratamento">Tratamento de pele</option>
+                        <option value="tratamento">Tratamento Facial</option>
+                        <option value="tratamento">Tratamento Capilar</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <label for="message">Mensagem:</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="../img/logo.png" alt="Logo" />
+                    KAROLESTÉTICA
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p>
+                        Email:
+                        <a href="mailto:contato@exemplo.com"
+                            >contato@exemplo.com</a
+                        >
+                    </p>
+                    <p>Telefone: (11) 1234-5678</p>
+                    <p>Endereço: Rua Exemplo, 123 - Cidade, Estado</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <a href="#" class="social-icon"
+                        ><img src="../img/facebook.png" alt="Facebook"
+                    /></a>
+                    <a href="#" class="social-icon"
+                        ><img src="../img/twitter.png" alt="Twitter"
+                    /></a>
+                    <a href="#" class="social-icon"
+                        ><img src="../img/instagram.png" alt="Instagram"
+                    /></a>
+                    <a href="#" class="social-icon"
+                        ><img src="../img/linkedin.png" alt="LinkedIn"
+                    /></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2024 Nome da Empresa. Todos os direitos reservados.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

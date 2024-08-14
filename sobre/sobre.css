@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-container {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: 50%; /* Distância ajustada entre o logo e o menu */
+    padding: 0;
+}
+
+.menu-container li {
+    margin-right: 30px;
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.menu-container li {
+    margin-right: 20px;
+    position: relative; /* Necessário para o pseudo-elemento */
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #797979;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-container a:hover {
+    transform: scale(
+        1.1
+    ); /* Aumenta um pouco o tamanho do link ao passar o mouse */
+    color: #000; /* Opcional: muda a cor do texto ao passar o mouse */
+}
+
+.menu-container a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Ajusta a posição da linha abaixo do link */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333; /* Cor da linha */
+    transition: width 0.3s ease;
+}
+
+.menu-container a:hover::after {
+    width: 100%; /* A linha aparece abaixo do link ao passar o mouse */
+}
+
+#logo {
+    margin-right: 5px; /* Espaço entre o logo e o texto KAROLESTICA */
+    margin-left: 50px;
+    vertical-align: middle; /* Certifica-se de que o logo e o texto estejam alinhados verticalmente */
+}
+
+.about:hover {
+    background-color: #382828;
+}
+
+.sign-in-btn {
+    background-color: #ba7894;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 110px;
+    height: 40px;
+}
+
+.sign-in-btn:hover {
+    background-color: #422a3c;
+}
+
+/*card princiapl*/
+.card-section {
+    background-color: #422a3c; /* Cor roxa para o fundo */
+    width: 1920px;
+    height: 400px;
+    color: #ffffff; /* Cor branca para o texto */
+    padding: 40px;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    flex-direction: column; /* Garante que o texto fique em coluna */
+}
+
+.card-section .welcome-content {
+    max-width: 800px; /* Limita a largura do conteúdo para melhor alinhamento */
+}
+
+.card-section .welcome-content p {
+    font-family: 'Monrope', sans-serif; /* Família de fontes para o parágrafo */
+    font-weight: 700; /* Peso da fonte ajustado */
+    font-size: 15px;
+    color: #ecbfd3; /* Cor para o parágrafo */
+    margin-bottom: 10px; /* Espaço abaixo do parágrafo */
+}
+
+.card-section .welcome-content h2 {
+    font-family: 'Playfair Display', serif; /* Família de fontes para o título */
+    font-weight: 900;
+    font-size: 55px;
+    color: #f7e5c1; /* Cor para o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.card-section .welcome-content button {
+    color: #ffffff;
+    background-color: #ba7894;
+    border: none; /* Remove bordas do botão */
+    padding: 10px 20px; /* Adiciona padding ao botão */
+    font-size: 16px; /* Ajusta o tamanho da fonte do botão */
+    cursor: pointer; /* Muda o cursor para pointer ao passar sobre o botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+    transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+
+.card-section .welcome-content button:hover {
+    background-color: #a76f82; /* Cor do botão ao passar o mouse */
+}
+
+
+/*seção dos nosso serviõs*/
+.values-section {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* Cor de fundo suave */
+}
+
+.values-section p {
+    font-family: 'Monrope';
+    font-weight: bold;
+    font-size: 15px;
+    color: #BA7894; /* Cor do texto */
+    margin-bottom: 10px;
+}
+
+.values-section h2 {
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    font-size: 45px;
+    color: #141414; /* Cor do título */
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column; /* Alinha os cards na vertical */
+    align-items: center; /* Centraliza os cards horizontalmente */
+    gap: 20px; /* Espaçamento entre os cards */
+    margin-top: 20px;
+}
+
+.value-card {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens ao topo para que img e h3 fiquem alinhados */
+    background-color: #FFFFFF; /* Fundo branco para o card */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 40%; /* Ajusta a largura do card para 40% da largura do container */
+}
+
+.value-card img {
+    width: 64px; /* Tamanho ajustado da imagem */
+    height: 64px;
+    margin-right: 15px; /* Espaço entre a imagem e o conteúdo */
+}
+
+.value-content {
+    display: flex;
+    flex-direction: column; /* Garante que o h3 fique acima do p */
+}
+
+.value-card .value-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #422A3C; /* Cor do título do card */
+    margin-bottom: 5px;
+    margin-top: 0; /* Remove margem superior do h3 */
+    text-align: left;
+}
+
+.value-card .value-content p {
+    font-family: 'Monrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #422A3C; /* Cor do texto do card */
+    margin: 0; /* Remove a margem padrão do parágrafo */
+    text-align: justify; /* Justifica o texto */
+}
+
+/*about section*/
+.about-section {
+    background-color: #fff6e5; /* Cor de fundo da seção */
+    padding: 40px; /* Espaçamento interno da seção */
+    display: flex;
+    justify-content: center; /* Centraliza o card horizontalmente */
+    align-items: center; /* Centraliza o card verticalmente */
+    min-height: 70vh; /* Garante que a seção ocupe toda a altura da tela */
+}
+
+/* Estilo para o card */
+.about-card {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    background-color: #422A3C; /* Cor de fundo do card menor */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    gap: 20px; /* Espaço entre a imagem e o conteúdo de texto */
+    max-width: 1200px; /* Largura máxima do card */
+    width: 100%; /* Ajusta o card para ocupar toda a largura disponível */
+}
+
+/* Estilo para a imagem no card */
+.about-card img {
+    width: 40%; /* Ajusta a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Adiciona borda arredondada à imagem */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+/* Estilo para o conteúdo do card */
+.about-content {
+    display: flex;
+    flex-direction: column; /* Garante que o texto fique em coluna */
+    max-width: 60%; /* Largura máxima do conteúdo de texto */
+    color: #F7E5C1; /* Cor do texto no card, para contraste com o fundo escuro */
+}
+.about-content p {
+    text-align: justify; /* Justifica o texto */
+}
+
+/* Estilo para o primeiro parágrafo no card */
+.about-content p:first-of-type {
+    font-family: 'Monrope', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: #FFFFFF; /* Cor do texto */
+    margin-bottom: 10px;
+   
+}
+
+/* Estilo para o título no card */
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 45px;
+    color: #FFFFFF; /* Cor do título */
+    margin-bottom: 15px;
+}
+
+/* Estilo para o parágrafo final no card */
+.about-content p:last-of-type {
+    font-family: 'Monrope', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF; /* Cor do texto */
+    line-height: 1.6; /* Espaço entre linhas para melhor legibilidade */
+}
+
+
+
+
+
+/*card service*/
+.about-service {
+    padding: 40px;
+    background-color: #f8f8f8; /* Cor de fundo da seção */
+}
+
+/* Estilo para o card */
+.service-card {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre o conteúdo e a imagem */
+    max-width: 1200px; /* Largura máxima do card */
+    margin: 0 auto; /* Centraliza o card horizontalmente */
+}
+
+/* Estilo para o conteúdo de texto */
+.text-content {
+    flex: 1; /* Faz o conteúdo de texto ocupar o máximo espaço disponível */
+}
+
+/* Estilo para o primeiro p */
+.text-content p:first-of-type {
+    font-family: 'Monrope', sans-serif;
+    font-weight: 600; /* Semi-bold */
+    font-size: 15px;
+    color: #BA7894; /* Cor do texto */
+    margin-bottom: 15px; /* Margem inferior */
+}
+
+/* Estilo para o h2 */
+.text-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 45px;
+    color: #422A3C; /* Cor do título */
+    margin-top: 20px; /* Margem superior */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+/* Estilo para o p depois do h2 */
+.text-content p:not(:first-of-type) {
+    font-family: 'Monrope', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 18px;
+    color: #422A3C; /* Cor do texto */
+    margin: 0; /* Remove margens padrão */
+    text-align: justify; /* Justifica o texto */
+}
+
+/* Estilo para "Our Methodology:" */
+.text-content .methodology p {
+    font-family: 'Monrope', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 19px;
+    color: #422A3C; /* Cor do texto */
+    margin-top: 20px; /* Margem superior */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+/* Estilo para os itens de metodologia */
+.methodology {
+    margin-top: 20px;
+}
+
+.methodology-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Espaço entre os itens */
+}
+
+.methodology-item img {
+    width: 24px; /* Tamanho da imagem do vetor */
+    height: 24px;
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.methodology-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #422A3C; /* Cor do título */
+    margin: 0;
+}
+
+/* Estilo para o conteúdo de imagem */
+.image-content {
+    flex: 1; /* Faz o conteúdo de imagem ocupar o máximo espaço disponível */
+    position: relative; /* Necessário para posicionar o botão de play sobre a imagem */
+}
+
+/* Estilo para a imagem principal */
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borda arredondada para a imagem */
+}
+
+/* Estilo para o botão de play */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; /* Tamanho do botão de play */
+    height: 80px;
+    cursor: pointer;
+}
+
+
+
+
+/*footer*/
+.footer {
+    background-color: #422a3c; /* Cor escura para o fundo do rodapé */
+    color: #ecbfd3; /* Cor clara para o texto */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ecbfd3; /* Cor clara para o texto dentro do container */
+}
+
+.footer-logo img {
+    max-width: 150px; /* Ajuste conforme necessário */
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1;
+    margin: 10px;
+    color: #ecbfd3; /* Cor clara para os textos */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ecbfd3; /* Cor clara para os links */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #ba7894; /* Borda com cor de destaque */
+    padding-top: 10px;
+    background-color: #422a3c; /* Cor de fundo consistente com o rodapé */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ecbfd3; /* Cor clara para o texto */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a logo e o texto */
+    gap: 10px; /* Espaço entre a logo e o texto */
+    color: #ecbfd3; /* Cor do texto "KAROLESTICA" */
+    font-size: 1.2rem; /* Tamanho da fonte para "KAROLESTICA" */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.footer-logo img {
+    filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%)
+        contrast(90%);
+}

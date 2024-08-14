@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+/* Importar fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-container {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: 50%; /* Distância ajustada entre o logo e o menu */
+    padding: 0;
+}
+
+.menu-container li {
+    margin-right: 30px;
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.menu-container li {
+    margin-right: 20px;
+    position: relative; /* Necessário para o pseudo-elemento */
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #797979;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-container a:hover {
+    transform: scale(
+        1.1
+    ); /* Aumenta um pouco o tamanho do link ao passar o mouse */
+    color: #000; /* Opcional: muda a cor do texto ao passar o mouse */
+}
+
+.menu-container a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Ajusta a posição da linha abaixo do link */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333; /* Cor da linha */
+    transition: width 0.3s ease;
+}
+
+.menu-container a:hover::after {
+    width: 100%; /* A linha aparece abaixo do link ao passar o mouse */
+}
+
+#logo {
+    margin-right: 5px; /* Espaço entre o logo e o texto KAROLESTICA */
+    margin-left: 50px;
+    vertical-align: middle; /* Certifica-se de que o logo e o texto estejam alinhados verticalmente */
+}
+
+.about:hover {
+    background-color: #382828;
+}
+
+.sign-in-btn {
+    background-color: #ba7894;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 110px;
+    height: 40px;
+}
+
+.sign-in-btn:hover {
+    background-color: #422a3c;
+}
+
+/* estilização das boas vindas*/
+/* Seção de boas-vindas */
+.welcome-section {
+    display: flex;
+    height: 80vh; /* Ajuste a altura da seção conforme necessário */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagem desfocada */
+.welcome-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./img/imagem_principal.png') no-repeat center center;
+    background-size: cover;
+    filter: blur(8px); /* Ajuste o nível de desfoque conforme necessário */
+    z-index: 0; /* A imagem desfocada fica atrás do texto e do gradiente */
+}
+
+/* Gradiente sobre a imagem desfocada */
+.welcome-section::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #422a3c 0%, rgba(66, 42, 60, 0) 100%);
+    z-index: 1; /* O gradiente fica acima da imagem desfocada */
+}
+
+/* Container para o texto */
+.text-container {
+    position: absolute; /* Posiciona o contêiner text-container de forma absoluta dentro da welcome-section */
+    top: 50%;
+    left: 50%;
+    transform: translate(
+        -50%,
+        -50%
+    ); /* Centraliza o contêiner text-container */
+    padding: 40px;
+    background: transparent; /* O fundo é transparente para ver o gradiente */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    text-align: center; /* Centraliza o texto */
+    z-index: 2; /* O texto fica acima do gradiente e da imagem */
+}
+
+/* Adicionando uma sombra suave para melhorar a legibilidade */
+.welcome-content {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra escura e suave */
+}
+
+.welcome-content h2 {
+    font-size: 70px; /* Maior destaque para o título principal */
+    margin-bottom: 15px;
+    letter-spacing: 6px; /* Espaçamento maior para ênfase */
+    font-weight: 900; /* Playfair Display 900 */
+    font-family: 'Playfair Display', serif;
+    color: #f7e5c1; /* Cor clara para contraste */
+    text-transform: uppercase; /* Todas as letras em maiúsculas */
+}
+
+.welcome-content h3 {
+    font-size: 2.5rem; /* Tamanho intermediário para subtítulo */
+    margin-bottom: 20px;
+    font-weight: 700; /* Playfair Display 700 */
+    font-family: 'Playfair Display', serif;
+    color: #f8e8ee; /* Tom mais suave para contraste */
+}
+
+.welcome-content p {
+    font-size: 1.3rem; /* Texto menor para descrição */
+    margin-bottom: 25px;
+    font-weight: 500; /* Inter 500 */
+    font-family: 'Inter', sans-serif;
+    color: #f0d7dd; /* Cor suave para texto explicativo */
+    line-height: 1.6; /* Maior espaçamento entre linhas */
+}
+
+.schedule-btn {
+    background-color: #ba7894;
+    color: #ffffff;
+    border: none;
+    padding: 15px 35px; /* Leve ajuste no tamanho do botão */
+    border-radius: 30px; /* Botão mais arredondado */
+    font-size: 1.2rem; /* Tamanho da fonte do botão */
+    font-weight: 700; /* Inter 700 */
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.schedule-btn:hover {
+    background-color: #af6685;
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+/*estilização carrocel*/
+.carousel-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.carousel-header h2 {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 45px;
+    color: #422a3c;
+    margin-bottom: 10px;
+}
+
+.carousel-header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-width: 180px;
+    margin: 0 10px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.carousel-caption {
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Novos estilos para avaliação, preço e botão */
+.carousel-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.rating {
+    font-size: 1rem;
+    color: #f5a623;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.review {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.more-info {
+    font-size: 1rem;
+    color: #422a3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*secao de recomendaçãp*/
+.experience-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e6eee7;
+}
+
+.experience-section h2 {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 45px;
+    color: #422a3c;
+    margin-bottom: 15px; /* Espaço entre o título e o parágrafo */
+}
+
+.experience-section p {
+    font-family: 'monrope';
+    font-weight: 400;
+    font-size: 20px; /* Ajuste conforme necessário */
+    color: #555555;
+    margin-bottom: 30px; /* Espaço entre o parágrafo e as imagens */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        2,
+        1fr
+    ); /* Define duas colunas de largura igual */
+    gap: 10px; /* Espaçamento reduzido entre as imagens */
+    justify-content: center; /* Centraliza o grid */
+}
+
+.image-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que as imagens não vazem da borda */
+    background-color: #fff; /* Fundo branco para os contêineres das imagens */
+    border-radius: 8px; /* Bordas arredondadas para os contêineres */
+}
+
+/* Estilo para as imagens pequenas */
+.small-image img {
+    width: 100%; /* Faz com que a imagem ocupe 100% da largura do contêiner */
+    height: 100%; /* Faz com que a imagem ocupe 100% da altura do contêiner */
+    object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorção */
+}
+
+
+.large-image {
+    grid-column: span 2; /* Faz com que a imagem ocupe duas colunas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.large-image img {
+    width: 100%; /* Faz com que a imagem ocupe 100% da largura do contêiner */
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorção */
+}
+
+/*relatos*/
+.relates-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.relates-section h2 {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 45px;
+    color: #422a3c;
+    margin-bottom: 15px; /* Espaço entre o título e o parágrafo */
+}
+
+.relates-section p {
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte do parágrafo */
+    color: #666;
+    margin-bottom: 20px; /* Espaço entre o parágrafo e o conteúdo */
+}
+
+.relates-content {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 30px; /* Aumenta o espaçamento entre a imagem e o texto */
+    margin-bottom: 30px; /* Espaço entre o conteúdo e os botões */
+}
+
+.relates-image {
+    max-width: 150px; /* Aumenta o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 15px; /* Adiciona bordas arredondadas mais acentuadas */
+}
+
+.testimony-text {
+    font-size: 1.5rem; /* Aumenta o tamanho da fonte do texto */
+    color: #333;
+    max-width: 700px; /* Ajusta a largura máxima do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 15px; /* Espaçamento entre os botões */
+}
+
+/* Estilo para o botão passar */
+.buttons-container img.passar-btn {
+    background-color: #422a3c; /* Cor de fundo roxa */
+    padding: 15px; /* Adiciona um pouco de espaço ao redor do ícone */
+    border-radius: 50%; /* Torna o fundo redondo */
+    color: #fff; /* Cor do texto, se houver, para contraste */
+    display: inline-block; /* Garante que o fundo seja aplicado corretamente */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo para o botão voltar */
+.buttons-container img.voltar-btn {
+    background-color: #ddd; /* Cor de fundo cinza claro para o botão voltar */
+    padding: 15px; /* Adiciona um pouco de espaço ao redor do ícone */
+    border-radius: 50%; /* Torna o fundo redondo */
+    color: #333; /* Cor do texto ou ícone para contraste */
+    display: inline-block; /* Garante que o fundo seja aplicado corretamente */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+.buttons-container img.passar-btn:hover {
+    background-color: #ba7894; /* Cor de fundo quando o botão é hovered */
+    cursor: pointer;
+}
+
+.buttons-container img.voltar-btn:hover {
+    background-color: #ccc; /* Cor de fundo quando o botão é hovered */
+    cursor: pointer;
+}
+
+.testimony-text {
+    text-align: justify; /* Justifica o texto */
+}
+
+/*footer*/
+.footer {
+    background-color: #422a3c; /* Cor escura para o fundo do rodapé */
+    color: #ecbfd3; /* Cor clara para o texto */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ecbfd3; /* Cor clara para o texto dentro do container */
+}
+
+.footer-logo img {
+    max-width: 150px; /* Ajuste conforme necessário */
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1;
+    margin: 10px;
+    color: #ecbfd3; /* Cor clara para os textos */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ecbfd3; /* Cor clara para os links */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #ba7894; /* Borda com cor de destaque */
+    padding-top: 10px;
+    background-color: #422a3c; /* Cor de fundo consistente com o rodapé */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ecbfd3; /* Cor clara para o texto */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a logo e o texto */
+    gap: 10px; /* Espaço entre a logo e o texto */
+    color: #ecbfd3; /* Cor do texto "KAROLESTICA" */
+    font-size: 1.2rem; /* Tamanho da fonte para "KAROLESTICA" */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.footer-logo img {
+    filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%)
+        contrast(90%);
+}
